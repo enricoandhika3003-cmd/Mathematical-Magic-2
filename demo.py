@@ -45,3 +45,17 @@ for num in range(1, a+1):
             temp //=10
         if rev == num:
             print(num)
+
+#2 Digit Primes
+primes = []
+
+for num in range(2, 101):
+    prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num%i == 0:
+            prime = False
+            break
+    if prime:
+        primes.append(num)
+
+print(primes)
